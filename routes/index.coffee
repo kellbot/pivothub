@@ -44,7 +44,7 @@ exports.issueHandle = (req, res) ->
   # storyData[2] is not used - it's always "issues" for the record
   
   if config.closeIssues? and story.current_state and story.current_state[0] is config.closeOn
-    if closeIssue user, repo, issue
+    if closeIssue user, repo, issueId
       res.send 'OK'
     else res.send 'Failure', 400
   else if config.updateComments? and story.notes and story.notes[0].note
