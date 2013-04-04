@@ -13,6 +13,6 @@
   "closeIssues": true,
   "closeOn": "accepted",
   "githubToken": "19c840cf08628861bc5d6a8a542eb1774c57a7c0",
-  "secretToken": "",
+  "secretToken": "abracadabra",
   "updateComments": true
 }
