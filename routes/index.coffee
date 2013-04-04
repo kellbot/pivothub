@@ -50,7 +50,7 @@ exports.issueHandle = (req, res) ->
   else if config.updateComments? and story.notes and story.notes[0].note
     if addIssueComment(user,
                        repo,
-                       issue,
+                       issueId,
                        "#{activity.description}\nhttps://www.pivotaltracker.com/story/show/#{story.id[0]._}")
       res.send 'OK'
     else res.send 'Failure', 400
