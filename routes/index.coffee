@@ -3,6 +3,9 @@ GithubApi = require 'github'
 util = require 'util'
 config = require '../config'
 
+config.githubToken = ENV['githubToken'] ? config.githubToken
+config.secretToken = ENV['secretToken'] ? config.secretToken
+
 parser = new xml2js.Parser()
 github = new GithubApi version: "3.0.0"
 
