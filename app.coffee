@@ -9,8 +9,8 @@ xmlBodyParser = require './lib/xml_body_parser'
 config = require './config'
 
 # Use evironmental config if available #
-# basicUsername = ENV['basicUsername'] ? config.basicUsername
-# basicPassword = ENV['basicPassword'] ? config.basicPassword
+config.basicUsername = process.env.basicUsername ? config.basicUsername
+config.basicPassword = process.env.basicPassword ? config.basicPassword
 
 app = express()
 auth = express.basicAuth config.basicUsername, config.basicPassword
