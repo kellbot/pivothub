@@ -8,11 +8,11 @@
     "secretToken":    "The String web hook token used for closing issues.",
     "updateComments": "The Boolean flag to indicate whether or not to push Pivotal Tracker comments to the GitHub issue."
   },
-  "basicUsername": null,
-  "basicPassword": null,
+  "basicUsername": process.env.basicUsername,
+  "basicPassword": process.env.basicPassword,
   "closeIssues": true,
   "closeOn": "accepted",
-  "githubToken": null,
-  "secretToken": null,
+  "githubToken": process.env.githubToken,
+  "secretToken": process.env.secretToken,
   "updateComments": true
 }

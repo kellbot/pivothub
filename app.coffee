@@ -9,11 +9,11 @@ xmlBodyParser = require './lib/xml_body_parser'
 config = require './config'
 
 # Use evironmental config if available #
-basicUsername = ENV['basicUsername'] ? config.basicUsername
-basicPassword = ENV['basicPassword'] ? config.basicPassword
+# basicUsername = ENV['basicUsername'] ? config.basicUsername
+# basicPassword = ENV['basicPassword'] ? config.basicPassword
 
 app = express()
-auth = express.basicAuth basicUsername, basicPassword
+auth = express.basicAuth config.basicUsername, config.basicPassword
 
 app.configure ->
   app.set 'port', process.env.PORT || 3000
